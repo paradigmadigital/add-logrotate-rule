@@ -1,0 +1,14 @@
+---
+# defaults file for add-logrotate-rule
+program_name:
+log_path:
+logrotate_options:
+  - compress
+  - create 644 root root
+  - daily
+  - delaycompress
+  - maxsize 10M
+  - missingok
+  - notifempty
+  - rotate 10
+  - shred

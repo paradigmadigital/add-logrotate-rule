@@ -1,0 +1,29 @@
+# Molecule managed
+
+---
+all:
+  hosts:
+    logrotate_centos_6: &id001
+      ansible_connection: docker
+    logrotate_centos_7: &id002
+      ansible_connection: docker
+    logrotate_debian_jessie: &id003
+      ansible_connection: docker
+    logrotate_debian_stretch: &id004
+      ansible_connection: docker
+    logrotate_debian_wheezy: &id005
+      ansible_connection: docker
+    logrotate_ubuntu_trusty: &id006
+      ansible_connection: docker
+    logrotate_ubuntu_xenial: &id007
+      ansible_connection: docker
+ungrouped:
+  hosts:
+    logrotate_centos_6: *id001
+    logrotate_centos_7: *id002
+    logrotate_debian_jessie: *id003
+    logrotate_debian_stretch: *id004
+    logrotate_debian_wheezy: *id005
+    logrotate_ubuntu_trusty: *id006
+    logrotate_ubuntu_xenial: *id007
+  vars: {}

@@ -1,0 +1,9 @@
+---
+# tasks file for add-logrotate-rule
+- name: Configure log rotation
+  template:
+    src: logrotate.conf.j2
+    dest: "/etc/logrotate.d/{{ program_name }}.conf"
+    owner: root
+    group: root
+    mode: 0644
