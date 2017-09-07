@@ -1,5 +1,7 @@
 ---
 - name: Converge
   hosts: all
+  vars:
+    program_name: my_awesome_program
   roles:
     - role: add-logrotate-rule

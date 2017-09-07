@@ -24,8 +24,6 @@ provisioner:
   name: ansible
   lint:
     name: ansible-lint
-  options:
-    e: force_docker=yes
 scenario:
   name: default
 verifier:
