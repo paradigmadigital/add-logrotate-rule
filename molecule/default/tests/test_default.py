@@ -7,7 +7,7 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 def test_logrotate_file(host):
-    f = host.file('/etc/logrotate.d/my_awesome_program.conf')
+    f = host.file('/etc/logrotate.d/my_awesome_program.log')
 
     assert f.exists
     assert f.user == 'root'
